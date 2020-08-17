@@ -23,7 +23,11 @@ export function createInstanceFromCommandLine(line) {
       args.push(words[i]);
   }
 
-  if (command === driver) {
-
+  if (command === "Driver") {
+      return new Driver(args[0]);
   }
+  if (command === "Trip") {
+    return new Trip(args[0], args[1], args[2],args[3]);
+}
+
 }
